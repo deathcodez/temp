@@ -1,0 +1,211 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #f0f9ff, #e0f2fe);
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0077ff;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #0077ff, #00c6ff);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+}
+
+header .font-bold {
+  font-size: 2rem;
+}
+
+header a {
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+header a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+}
+
+.hero-section div {
+  transition: all 0.5s ease-in-out;
+}
+
+.hero-section h2 {
+  font-size: 3rem;
+  background: -webkit-linear-gradient(#ff7eb3, #ff758c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  color: #444;
+}
+
+.hero-section button {
+  background: linear-gradient(to right, #ff7eb3, #ff758c);
+  color: white;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-section button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section img {
+  border: 5px solid #fff;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+}
+
+.hero-section img:hover {
+  transform: scale(1.05);
+}
+
+/* Sliding Windows Effect */
+.hero-section .hero-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.7s ease-in-out;
+  opacity: 0;
+}
+
+.hero-section .hero-slide.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hero-section .hero-slide.next {
+  transform: translateX(100%);
+}
+
+.hero-section .hero-slide.prev {
+  transform: translateX(-100%);
+}
+
+/* Navigation Buttons */
+button {
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Navigation Buttons */
+button[aria-label="Previous slide"],
+button[aria-label="Next slide"] {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+button[aria-label="Previous slide"] {
+  left: 20px;
+}
+
+button[aria-label="Next slide"] {
+  right: 20px;
+}
+
+button[aria-label="Previous slide"]:hover,
+button[aria-label="Next slide"]:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section h2 {
+    font-size: 2rem;
+  }
+  .hero-section p {
+    font-size: 1rem;
+  }
+  .hero-section img {
+    width: 100%;
+    height: auto;
+  }
+}
